@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  width: 30rem;
+  min-width: fit-content;
+  min-height: 30rem;
+  max-width: 60;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.datetime-container {
+  padding: 5px 10px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
