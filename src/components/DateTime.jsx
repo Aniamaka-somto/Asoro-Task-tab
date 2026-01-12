@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Datetime.css";
 
-export default function DatePicker({ value, onChange, label }) {
+export default function DateTime({ value, onChange, label }) {
   const [showCalendar, setShowCalendar] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(value || new Date());
   const datePickerRef = useRef(null);

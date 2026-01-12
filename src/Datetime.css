@@ -36,7 +36,7 @@
 
 .date-picker-trigger:focus {
   outline: none;
-  border-color: #2d9d92;
+  border: 2px solid #2d9d92;
 }
 
 .calendar-icon {
