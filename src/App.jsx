@@ -2,21 +2,32 @@ import React, { useState } from "react";
 import "./App.css";
 import DateTime from "./components/DateTime";
 import Dropdown from "./components/Dropdown";
-import Button from "./components/Button";
+import { CounterButton, SubmitButton, StatusButton } from "./components/Button";
+
+{
+  /* <SubmitButton text="Submit" onClick={handleSubmit} />
+<StatusButton text="Active" onClick={handleStatus} /> */
+}
+import { FiUpload, FiMinus, FiPlus } from "react-icons/fi";
 
 const App = () => {
   const [date, setDate] = useState(new Date(2026, 0, 11));
   const options = ["Website Redesign", "Mobile App Development"];
   const [value, setValue] = useState(1);
+  const [selected, setSelected] = useState(true);
+  const status = ["Completed", "In Progress", "Pending", "Blocked"];
 
   const handleIncrement = () => {
-    setValue((value) => value + 1);
+    setValue((value) => value + 0.5);
   };
   const handleDecrement = () => {
-    if (value > 1) {
-      setValue((value) => value - 1);
+    if (value > 0.5) {
+      setValue((value) => value - 0.5);
     }
   };
+  //   const handleStatusSelect=(id)=>{
+  // setSelected
+  //   }
 
   return (
     <div className="">
@@ -53,9 +64,9 @@ const App = () => {
               width: "100%",
             }}
           >
-            <Button text="-" onClick={handleDecrement} />
+            <CounterButton text={<FiMinus />} onClick={handleDecrement} />
             {/* remember to use react icons cause the subtract sign wont work*/}
-            <h1>
+            <h1 style={{ fontSize: "1.85rem", fontWeight: "600" }}>
               {value}
               {""}
               <span
@@ -65,21 +76,36 @@ const App = () => {
                   color: "#939898ff",
                 }}
               >
-                {value > 1 ? " hours" : "hour"}
+                {value > 1 ? " hours" : " hour"}
               </span>
             </h1>
-            <Button text="+" onClick={handleIncrement} />
+            <CounterButton text={<FiPlus />} onClick={handleIncrement} />
           </div>
         </div>
         <div className="status-container">
           <label htmlFor="">Status</label>
+          <div className="status-grid">
+            {status.map((status, key) => {
+              return <StatusButton text={status} key={key} />;
+            })}
+          </div>
         </div>
         <div className="attachment-container">
           <label htmlFor="">Attachment (Optional)</label>
-          <div className="attachment-box"></div>
+          <div className="attachment-box">
+            <FiUpload />
+            <p style={{ fontSize: "14px" }}>
+              {" "}
+              <span style={{ color: "#2d9d92", fontWeight: "500" }}>
+                Tap to upload
+              </span>{" "}
+              or drag and drop
+            </p>
+            <p style={{ fontSize: "12px" }}>Photos, documents, or any files</p>
+          </div>
         </div>
         <div className="submit-container">
-          <div className="submit-button">Submit Report</div>
+          <SubmitButton text="Submit report" />
         </div>
       </div>
     </div>
