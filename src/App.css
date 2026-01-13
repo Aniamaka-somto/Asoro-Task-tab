@@ -8,27 +8,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   min-height: 100vh;
+  width: 100%;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .container {
   background-color: white;
-  width: 30rem;
-  min-width: fit-content;
+  max-width: 100%;
+  width: 32rem;
   min-height: 30rem;
-  max-width: 60;
   padding: 1rem;
   border-radius: 12px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  /* display: flex;
+  flex-direction: column;
+  align-items: stretch; */
 }
 
 .datetime-container,
 .project-container,
-.task-container {
+.task-container,
+.hours-container,
+.status-container,
+.attachment-container,
+.submit-container {
   padding: 5px 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
+  margin-bottom: 12px;
 }
 
 /*                                         project dropdown                          */
@@ -37,7 +49,8 @@ body {
   position: relative;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
+  height: 48px;
 }
 
 .dropdown-header {
@@ -45,8 +58,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 14px 16px;
-  background: #f3f4f6;
-  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  border: 1px solid #e0e6eb;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -55,6 +68,8 @@ body {
 
 .dropdown-header:hover {
   border-color: #d1d5db;
+  border-color: #2d9d92;
+  box-shadow: 0 0 0 1px #2d9d92;
 }
 
 .placeholder-text {
@@ -113,4 +128,96 @@ body {
 
 .dropdown-item:last-child {
   border-radius: 0 0 8px 8px;
+}
+
+/*                                           Task descrption                                 */
+.task-description {
+  width: 100%;
+  min-height: 80px;
+  height: 120px;
+  max-height: 300px;
+  padding: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #e0e6eb;
+  border-radius: 12px;
+  font-family: inherit;
+  resize: none;
+  overflow: hidden;
+  background-color: #f9fafb;
+  overflow-y: auto;
+  scrollbar-color: #9ca3af #f3f4f6;
+  /* margin-bottom: 15px; */
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.task-description:focus {
+  outline-color: #2d9d92;
+}
+
+/*                                       hours spent                               */
+
+.counter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: #edf0f2a9;
+  font-size: 20px;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.counter-button:hover {
+  background-color: #e6e9eb;
+}
+.counter-button:active {
+  background-color: #dedfe0;
+}
+
+/*                         attachment                */
+
+.attachment-box {
+  width: 100%;
+  height: 140px;
+  border: 2px dashed #e0e6eb;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+.attachment-box:hover {
+  border-color: #2d9d92;
+  background-color: #2d9d9213;
+}
+
+/* submit button */
+.submit-button {
+  width: 100%;
+  background-color: #2d9d92;
+  height: 55px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
 }
