@@ -50,7 +50,44 @@ const App = () => {
     <div className="screen">
       <div className="header">
         <div className="nav-section">
-          <div className="heading"></div>
+          <div className="heading">
+            <div className="" style={{ display: "flex", gap: "10px" }}>
+              <div
+                className=""
+                style={{
+                  width: "2.75rem",
+                  height: "2.75rem",
+                  backgroundColor: "#2d9d92",
+                  borderRadius: "12px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  color: "white",
+                  fontSize: "1.3rem",
+                }}
+              >
+                <LuClipboardList />
+              </div>
+              <div
+                className=""
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "fit-content",
+                  gap: "5px",
+                }}
+              >
+                <h4 style={{ fontSize: "1.125rem", fontWeight: "600" }}>
+                  Task Report
+                </h4>
+                <p style={{ fontSize: "0.875rem", color: "#6c7c93" }}>
+                  Log your activities
+                </p>
+              </div>
+            </div>
+
+            <div className=""></div>
+          </div>
           <Tabs tabs={navTab} />
         </div>
       </div>

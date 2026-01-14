@@ -90,10 +90,15 @@ label {
   font-size: 12px;
   font-weight: 400;
 }
+/*            heading                */
 .heading {
   width: 100%;
   height: 100%;
   background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
 }
 /*                        tab           */
 .tab-container {
@@ -105,6 +110,7 @@ label {
   justify-content: space-between;
   align-items: center;
   padding: 5px;
+  margin-top: 8px;
 }
 .nav-section {
   display: flex;
@@ -131,6 +137,7 @@ label {
   cursor: pointer;
   padding: 10px 5px;
   border-radius: 9px;
+  transition: all 0.2s ease;
 }
 .tab:hover {
   color: #1f2937;
