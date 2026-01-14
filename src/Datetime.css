@@ -1,11 +1,11 @@
 .date-picker-field {
-  margin-bottom: 8px;
+  margin-bottom: 0;
   font-family: "Inter", system-ui, sans-serif;
 }
 
 .date-picker-label {
   display: block;
-  font-size: 16px;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #1a1a1a;
   margin-bottom: 8px;
@@ -17,7 +17,7 @@
 
 .date-picker-trigger {
   width: 100%;
-  padding: 12px 16px;
+  padding: 10px 16px;
   font-size: 1rem;
   border: 1px solid #d1d5db;
   border-radius: 12px;

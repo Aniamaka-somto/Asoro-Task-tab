@@ -14,7 +14,7 @@ const App = () => {
   const [date, setDate] = useState(new Date(2026, 0, 11));
   const options = ["Website Redesign", "Mobile App Development"];
   const [value, setValue] = useState(1);
-  const [selected, setSelected] = useState(true);
+  const [activeButton, setActiveButton] = useState(1);
   const status = ["Completed", "In Progress", "Pending", "Blocked"];
 
   const handleIncrement = () => {
@@ -25,10 +25,9 @@ const App = () => {
       setValue((value) => value - 0.5);
     }
   };
-  //   const handleStatusSelect=(id)=>{
-  // setSelected
-  //   }
-
+  const handleSelectStatus = (index) => {
+    setActiveButton(index);
+  };
   return (
     <div className="">
       <div className="container">
@@ -86,7 +85,14 @@ const App = () => {
           <label htmlFor="">Status</label>
           <div className="status-grid">
             {status.map((status, key) => {
-              return <StatusButton text={status} key={key} />;
+              return (
+                <StatusButton
+                  text={status}
+                  key={key}
+                  classStyle={activeButton === key ? "select" : ""}
+                  onClick={() => handleSelectStatus(key)}
+                />
+              );
             })}
           </div>
         </div>

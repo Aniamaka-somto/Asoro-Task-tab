@@ -17,9 +17,9 @@ export const SubmitButton = ({ text, onClick }) => {
   );
 };
 
-export const StatusButton = ({ text, onClick }) => {
+export const StatusButton = ({ text, onClick, classStyle }) => {
   return (
-    <div className="status-button" onClick={onClick}>
+    <div className={`status-button ${classStyle}`} onClick={onClick}>
       {text}
     </div>
   );

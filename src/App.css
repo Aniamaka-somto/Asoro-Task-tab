@@ -32,6 +32,7 @@ body {
 label {
   font-size: 0.875rem;
   font-weight: 500;
+  margin-bottom: 8px;
 }
 
 .datetime-container,
@@ -190,8 +191,8 @@ textarea::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  width: 2.75rem;
+  height: 2.75rem;
   background-color: #edf0f2a9;
   font-size: 20px;
   border-radius: 12px;
@@ -220,15 +221,19 @@ textarea::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   align-items: center;
   width: auto;
-  height: 45px;
+  height: 2.75rem;
   background-color: #edf0f2a9;
   border-radius: 12px;
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.04s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
-.statusButtonSelect {
+.status-button.select {
+  background-color: white;
+  border: 2px solid rgb(29, 37, 48);
 }
 
 /*                         attachment                */
@@ -258,12 +263,89 @@ textarea::-webkit-scrollbar-thumb:hover {
 .submit-button {
   width: 100%;
   background-color: #2d9d92;
-  height: 55px;
+  height: 53px;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  font-weight: bold;
+  font-weight: 600;
   color: white;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.submit-button:hover {
+  background-color: #2d9d92e9;
+}
+.submit-button:active {
+  animation: elegant-bounce 0.7s cubic-bezier(0.34, 1.56, 0.4, 1);
+}
+
+@keyframes elegant-bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .dropdown-header {
+    padding: 12px 14px;
+    font-size: 0.9375rem;
+  }
+
+  .task-description {
+    font-size: 0.9375rem;
+    min-height: 100px;
+  }
+
+  /* Stack status buttons on very small screens */
+
+  .status-button {
+    height: 2.5rem;
+  }
+
+  .counter-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .attachment-box {
+    height: 120px;
+    font-size: 1.75rem;
+  }
+
+  .submit-button {
+    height: 48px;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Ensure form doesn't get too wide on large screens */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 32rem;
+  }
 }
