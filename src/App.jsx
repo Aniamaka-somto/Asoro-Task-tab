@@ -12,6 +12,7 @@ import {
   LuReceipt,
   LuStar,
   LuSettings2,
+  LuBell,
 } from "react-icons/lu";
 
 const App = () => {
@@ -86,9 +87,11 @@ const App = () => {
               </div>
             </div>
 
-            <div className=""></div>
+            <div className="notification">
+              <LuBell />
+            </div>
           </div>
-          <Tabs tabs={navTab} />
+          <Tabs tabs={navTab} onClick={() => handleSelectStatus} />
         </div>
       </div>
       <div className="main">

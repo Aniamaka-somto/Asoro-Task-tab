@@ -6,8 +6,8 @@ const Tabs = ({ tabs }) => {
       {tabs.map((tab, key) => {
         return (
           <div className="tab" key={key}>
-            {tab.logo}
-            {tab.text}
+            {tab.logo}{" "}
+            <span className={key === 0 ? "review" : "hidden"}>{tab.text}</span>
           </div>
         );
       })}

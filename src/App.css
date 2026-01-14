@@ -385,6 +385,21 @@ textarea::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.notification {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.notification:hover {
+  background-color: hsl(173 45% 94%);
+  color: #2d9d92;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 640px) {
   .container {
@@ -393,5 +408,16 @@ textarea::-webkit-scrollbar-thumb:hover {
   }
   .main {
     padding: 1.4rem 1rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .review {
+    font-size: 0;
+  }
+  .review::before {
+    content: "Review";
+    font-size: 0.75rem;
   }
 }
