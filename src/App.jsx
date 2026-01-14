@@ -12,7 +12,13 @@ import { FiUpload, FiMinus, FiPlus } from "react-icons/fi";
 
 const App = () => {
   const [date, setDate] = useState(new Date(2026, 0, 11));
-  const options = ["Website Redesign", "Mobile App Development"];
+  const options = [
+    "Website Redesign",
+    "Mobile App Development",
+    "API Integration",
+    "Database Migration",
+    "Client Dashboard",
+  ];
   const [value, setValue] = useState(1);
   const [activeButton, setActiveButton] = useState(1);
   const status = ["Completed", "In Progress", "Pending", "Blocked"];
@@ -29,7 +35,7 @@ const App = () => {
     setActiveButton(index);
   };
   return (
-    <div className="">
+    <div className="screen">
       <div className="container">
         <div className="datetime-container">
           {/* had to create a custom datetime picker */}
@@ -113,6 +119,9 @@ const App = () => {
         <div className="submit-container">
           <SubmitButton text="Submit report" />
         </div>
+      </div>
+      <div className="re-container">
+        Reports are saved automatically and synced across devices
       </div>
     </div>
   );
