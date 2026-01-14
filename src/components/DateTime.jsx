@@ -273,18 +273,3 @@ export default function DateTime({ value, onChange, label }) {
     </div>
   );
 }
-
-// Usage Example:
-// import DatePicker from './DatePicker';
-//
-// function App() {
-//   const [date, setDate] = useState(new Date());
-//
-//   return (
-//     <DatePicker
-//       value={date}
-//       onChange={setDate}
-//       label="Date"
-//     />
-//   );
-// }
