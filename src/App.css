@@ -388,6 +388,9 @@ textarea::-webkit-scrollbar-thumb:hover {
     transform: scale(1);
   }
 }
+.hid {
+  display: none;
+}
 
 .notification {
   width: 2.75rem;
