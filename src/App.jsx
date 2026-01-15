@@ -26,6 +26,7 @@ const App = () => {
   ];
   const [value, setValue] = useState(1);
   const [activeButton, setActiveButton] = useState(1);
+  const [activeTab, setActiveTab] = useState(0);
   const status = ["Completed", "In Progress", "Pending", "Blocked"];
   const navTab = [
     { text: "Submissions", logo: <LuFileCheck /> },
@@ -46,6 +47,9 @@ const App = () => {
   };
   const handleSelectStatus = (index) => {
     setActiveButton(index);
+  };
+  const handleSelectTab = (index) => {
+    setActiveTab(index);
   };
   return (
     <div className="screen">
@@ -91,7 +95,7 @@ const App = () => {
               <LuBell />
             </div>
           </div>
-          <Tabs tabs={navTab} onClick={() => handleSelectStatus} />
+          <Tabs tabs={navTab} onClick={handleSelectTab} activTab={activeTab} />
         </div>
       </div>
       <div className="main">

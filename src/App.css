@@ -142,6 +142,10 @@ label {
 .tab:hover {
   color: #1f2937;
 }
+.tab.active {
+  color: #1f2937;
+  background-color: white;
+}
 /*                                         project dropdown                          */
 
 .custom-dropdown {
