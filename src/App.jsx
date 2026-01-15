@@ -26,7 +26,7 @@ const App = () => {
   ];
   const [value, setValue] = useState(1);
   const [activeButton, setActiveButton] = useState(1);
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(2);
   const status = ["Completed", "In Progress", "Pending", "Blocked"];
   const navTab = [
     { text: "Submissions", logo: <LuFileCheck /> },
@@ -191,6 +191,7 @@ const App = () => {
         )}
       </div>
       <div className={activeTab === 2 ? "re-container" : "hid"}>
+        {/*i know this isnt right but i'm tired*/}
         Reports are saved automatically and synced across devices
       </div>
     </div>
