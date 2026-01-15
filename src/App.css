@@ -430,4 +430,7 @@ textarea::-webkit-scrollbar-thumb:hover {
   .header {
     padding-top: 0;
   }
+  .heading {
+    padding: 0 0;
+  }
 }
