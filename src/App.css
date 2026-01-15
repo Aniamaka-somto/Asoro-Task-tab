@@ -427,4 +427,7 @@ textarea::-webkit-scrollbar-thumb:hover {
     content: "Review";
     font-size: 0.75rem;
   }
+  .header {
+    padding-top: 0;
+  }
 }
