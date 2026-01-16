@@ -189,10 +189,10 @@ const App = () => {
         ) : (
           ""
         )}
-      </div>
-      <div className={activeTab === 2 ? "re-container" : "hid"}>
-        {/*i know this isnt right but i'm tired*/}
-        Reports are saved automatically and synced across devices
+        <div className={activeTab === 2 ? "re-container" : "hid"}>
+          {/*i know this isnt right but i'm tired*/}
+          Reports are saved automatically and synced across devices
+        </div>
       </div>
     </div>
   );
