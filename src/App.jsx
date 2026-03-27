@@ -14,6 +14,7 @@ import {
   LuSettings2,
   LuBell,
 } from "react-icons/lu";
+import FileUpload from "./components/FileUPload";
 
 const App = () => {
   const [date, setDate] = useState(new Date(2026, 0, 11));
@@ -167,20 +168,7 @@ const App = () => {
               </div>
             </div>
             <div className="attachment-container">
-              <label htmlFor="">Attachment (Optional)</label>
-              <div className="attachment-box">
-                <FiUpload />
-                <p style={{ fontSize: "14px" }}>
-                  {" "}
-                  <span style={{ color: "#2d9d92", fontWeight: "500" }}>
-                    Tap to upload
-                  </span>{" "}
-                  or drag and drop
-                </p>
-                <p style={{ fontSize: "12px" }}>
-                  Photos, documents, or any files
-                </p>
-              </div>
+              <FileUpload />
             </div>
             <div className="submit-container">
               <SubmitButton text="Submit report" />
